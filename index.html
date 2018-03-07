@@ -163,7 +163,7 @@
   </style>
 </noscript>
 
-</head>
+<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -337,9 +337,10 @@
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>据说是目前Hexo比较好用的两个播放器插件了，给大佬们递女装。<br><a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-aplayer --save</span><br><span class="line">npm install dplayer --save</span><br></pre></td></tr></table></figure>
-<p>Hexo的<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">APlayer</a>标签插件<br><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
+            <script src="/assets/js/APlayer.min.js"> </script><p>据说是目前Hexo比较好用的两个播放器插件了，给大佬们递女装。</p>
+<h2 id="hexo-tag-aplayer"><a href="#hexo-tag-aplayer" class="headerlink" title="hexo-tag-aplayer"></a><a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">hexo-tag-aplayer</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-aplayer --save</span><br><span class="line">npm install dplayer --save</span><br></pre></td></tr></table></figure>
+<p>Hexo的<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">APlayer</a>标签插件</p>
+<p>插入mp3：<br>其中author,title 前两个标签必须添加，不然报错<br><code><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
 		<script>
 			var ap = new APlayer({
 				element: document.getElementById("aplayer0"),
@@ -347,15 +348,34 @@
 				autoplay: false,
 				showlrc: 0,
 				music: {
-					title: "secret base~君がくれたもの~%",
-					author: "茅野愛衣",
-					url: "https://dplayer.b0.upaiyun.com/secretbase.mp3",
+					title: "HUSH",
+					author: "Lasse Lindh",
+					url: "http://opj0cbfmf.bkt.clouddn.com/Part.3%20Lasse%20Lindh%20-%20Hush.mp3",
+					pic: "http://opj0cbfmf.bkt.clouddn.com/hush.jpg",
+				}
+			});
+			window.aplayers || (window.aplayers = []);
+			window.aplayers.push(ap);
+		</script></code><br><div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div>
+		<script>
+			var ap = new APlayer({
+				element: document.getElementById("aplayer1"),
+				narrow: false,
+				autoplay: false,
+				showlrc: 0,
+				music: {
+					title: "海の見える街",
+					author: "広橋真紀",
+					url: "http://77g1zx.com1.z0.glb.clouddn.com/%E6%B5%B7%E3%81%AE%E8%A7%81%E3%81%88%E3%82%8B%E8%A1%97.mp3",
 					pic: "https://dplayer.b0.upaiyun.com/secretbase.jpg",
 				}
 			});
 			window.aplayers || (window.aplayers = []);
 			window.aplayers.push(ap);
 		</script></p>
+<h2 id="hexo-tag-dplayer"><a href="#hexo-tag-dplayer" class="headerlink" title="hexo-tag-dplayer"></a><a href="https://github.com/MoePlayer/hexo-tag-dplayer" target="_blank" rel="noopener">hexo-tag-dplayer</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install dplayer --save</span><br><span class="line">npm install hexo-tag-dplayer --save</span><br></pre></td></tr></table></figure>
+<p>Hexo的<a href="https://github.com/MoePlayer/DPlayer" target="_blank" rel="noopener">DPlayer</a>标签插件</p>
+<p>插入mp4：<br><code><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://home.ustc.edu.cn/~mmmwhy/GEM.mp4","pic":"http://home.ustc.edu.cn/~mmmwhy/GEM.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></code><br><div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"video":{"url":"http://77g1zx.com1.z0.glb.clouddn.com/%E7%A7%92%E9%80%9F%E4%BA%94%E5%8E%98%E7%B1%B3_%E8%87%B3%E9%9D%92%E6%98%A5%E4%B8%8E%E7%88%B1%E6%83%85.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></p>
 
           
         
